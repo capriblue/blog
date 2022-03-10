@@ -3,29 +3,31 @@ import { graphql } from "gatsby";
 
 const BlogPost = ({ data }) => {
   const remark = data.markdownRemark;
-  const date = remark.fileAbsolutePath.split("/").slice(-2, -1);
+  const date = remark.fileAbsolutePath.split("/").slice(-2, -1) ?? `2020/03/11`
+  // const date = `2022/03/11`
   return (
     <>
       <h1>{remark.frontmatter.title}</h1>
       <small>
         category: {remark.frontmatter.category}, date: {date}
       </small>
-      {remark.html}
+      <div dangerouslySetInnerHTML={{__html: remark.html}}/>
     </>
   );
 };
 
 export const query = graphql`
-  query  {
-    markdownRemark(id: { eq: "483c8131-6bbb-5309-9913-f459821e6af4" }) {
-      fileAbsolutePath
-      frontmatter {
-        title
-        category
-      }
-      html
+{
+  markdownRemark {
+    fileAbsolutePath
+    frontmatter {
+      title
+      category
     }
+    html
   }
+}
+
 `;
 
 export default BlogPost;

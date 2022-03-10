@@ -1,8 +1,8 @@
 import * as React from "react";
 import { graphql, Link, useStaticQuery } from "gatsby";
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
+const Layout = ({ children}) => {
+    const data = useStaticQuery(graphql`
     query {
       allSitePage {
         nodes {
@@ -10,8 +10,8 @@ const Layout = ({ children }) => {
         }
       }
     }
-  `);
-  const linknodes = data.allSitePage.nodes;
+    `)
+  const linknodes = data.allSitePage.nodes
   return (
     <>
       {linknodes.map((leaf) => (
@@ -23,5 +23,6 @@ const Layout = ({ children }) => {
     </>
   );
 };
+
 
 export default Layout;
