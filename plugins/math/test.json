@@ -1,0 +1,61 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "heading",
+      "depth": 1,
+      "children": [
+        {
+          "type": "text",
+          "value": "hello world",
+          "position": {
+            "start": { "line": 2, "column": 3, "offset": 4 },
+            "end": { "line": 2, "column": 14, "offset": 15 }
+          }
+        }
+      ],
+      "position": {
+        "start": { "line": 2, "column": 1, "offset": 2 },
+        "end": { "line": 2, "column": 14, "offset": 15 }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "this is the blog. I would like to know how to display math text.",
+          "position": {
+            "start": { "line": 4, "column": 1, "offset": 19 },
+            "end": { "line": 4, "column": 65, "offset": 83 }
+          }
+        }
+      ],
+      "position": {
+        "start": { "line": 4, "column": 1, "offset": 19 },
+        "end": { "line": 4, "column": 65, "offset": 83 }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "$$\r\nf(x ) = \\sum_{n=0}^{\\infty}\\frac{f'(0)}{n!}x^n\r\n$$\r\nthis is mclaughlin expansion. $f(x)$ is a function.",
+          "position": {
+            "start": { "line": 6, "column": 1, "offset": 87 },
+            "end": { "line": 9, "column": 52, "offset": 194 }
+          }
+        }
+      ],
+      "position": {
+        "start": { "line": 6, "column": 1, "offset": 87 },
+        "end": { "line": 9, "column": 52, "offset": 194 }
+      }
+    }
+  ],
+  "position": {
+    "start": { "line": 1, "column": 1, "offset": 0 },
+    "end": { "line": 10, "column": 1, "offset": 196 }
+  }
+}
