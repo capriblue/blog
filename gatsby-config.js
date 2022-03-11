@@ -5,7 +5,6 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-styled-components",
-    "gatsby-transformer-remark",
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -21,5 +20,13 @@ module.exports = {
         path: `${__dirname}/blog/`,
       },
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `markdown-pages`,
+        path: `${__dirname}/src/markdown-pages`,
+      }
+    },
+    "gatsby-transformer-remark",
   ],
 };
